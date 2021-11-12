@@ -13,13 +13,29 @@ public class SelectionManager : MonoBehaviour
     private ThirdPersonMovement player;
 
     private Transform _selection;
+
+    public bool gamePaused = false;
     void Update()
     {
+        
+        
         if (_selection != null)
         {
             var selectionRenderer = _selection.GetComponent<Renderer>();
             selectionRenderer.material = defaultMaterial;
             _selection = null;
+
+            if (Input.GetKeyDown(KeyCode.Space ))
+            {
+                if (gamePaused == false)
+                {
+                    gamePaused = true;
+                }
+                else
+                {
+                    gamePaused = false;
+                }
+            }
         }
 
         Ray ray = new Ray(player.transform.position, player.transform.forward);//Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -37,6 +53,15 @@ public class SelectionManager : MonoBehaviour
                 }
                 _selection = selection;
             }
+        }
+
+        if (gamePaused == true)
+        {
+            Time.timeScale = 0.0f;
+        }
+        else
+        {
+            Time.timeScale = 1.0f;
         }
     }
 }

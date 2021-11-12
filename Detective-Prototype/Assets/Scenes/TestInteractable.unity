@@ -263,7 +263,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803394771}
-  m_LocalRotation: {x: 0.3978351, y: -3e-45, z: 1e-45, w: 0.9174569}
+  m_LocalRotation: {x: 0.3978351, y: 1e-45, z: -1e-45, w: 0.9174569}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -819,6 +819,7 @@ MonoBehaviour:
   cam: {fileID: 1961101150}
   speed: 6
   turnSmoothTime: 0.1
+  selectionManager: {fileID: 2074229684}
 --- !u!1 &1523276243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1697,6 +1698,7 @@ MonoBehaviour:
   selectedMaterial: {fileID: 2100000, guid: 1e70e11ffe4b7df4c9ed9226f5bfeca3, type: 2}
   defaultMaterial: {fileID: 2100000, guid: c3b1abec490bbd445a2243df2596f069, type: 2}
   player: {fileID: 1417940917}
+  gamePaused: 0
 --- !u!4 &2074229685
 Transform:
   m_ObjectHideFlags: 0
